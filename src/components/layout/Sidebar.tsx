@@ -1,29 +1,21 @@
 import React from "react";
-import { Link, Outlet, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
-import {
-  // Home,
-  // CreditCard,
-  // Target,
-  // BarChart3,
-  // Database,
-  // Menu,
-  // X,
-  // DollarSign,
-  TrendingUp,
-} from "lucide-react";
+import { TrendingUp } from "lucide-react";
 import { navLinks } from "../../data";
 import Logo from "../Logo";
 
 const Sidebar = () => {
   const location = useLocation();
-  console.log(location)
 
   const isActive = (path: string) => {
-    return location.pathname === `/${path}` || (path === "dashboard" && location.pathname === "/");
+    return (
+      location.pathname === `/${path}` ||
+      (path === "dashboard" && location.pathname === "/")
+    );
   };
   return (
-    <div className="flex">
+    <div>
       <div className="flex flex-col bg-sidebar min-h-screen">
         <div className="border-b border-r border-sidebar-border px-5 py-4">
           <Logo />
@@ -65,10 +57,6 @@ const Sidebar = () => {
           </div>
         </div>
       </div>
-
-      <main className="mt-20 absolute left-80">
-        <Outlet />
-      </main>
     </div>
   );
 };

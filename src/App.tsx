@@ -1,15 +1,9 @@
-import {
-  createBrowserRouter,
-  Navigate,
-  RouterProvider,
-} from "react-router-dom";
-import {
-  Budgets,
-  Dashboard,
-  Transactions,
-  Analytics,
-  Data,
-} from "./components";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Dashboard } from "./features/dashboard";
+import { Transactions } from "./features/transactions";
+import { Budgets } from "./features/budgets";
+import { Analytics } from "./features/analytics";
+import { Data } from "./features/data";
 import Landing from "./pages/Landing";
 
 const router = createBrowserRouter([

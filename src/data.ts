@@ -5,8 +5,8 @@ import {
   Target,
   BarChart3,
   Database,
-  Menu,
-  TrendingUp,
+//   Menu,
+//   TrendingUp,
 } from "lucide-react";
 import { type LucideIcon } from "lucide-react";
 

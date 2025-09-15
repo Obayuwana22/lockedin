@@ -1,7 +1,6 @@
 import React from "react";
 import { Bell, Search, User } from "lucide-react";
 import { useLocation } from "react-router-dom";
-// import Logo from "../Logo";
 
 const Header = () => {
   const location = useLocation();
@@ -37,24 +36,39 @@ const Header = () => {
   return (
     <div className="bg-card/50 border-b border-sidebar-border py-2 px-5">
       <div className="flex items-center justify-between">
-        {/* <div className="border-b border-sidebar-border">
-          <Logo />
-        </div> */}
         <div>
           <h1 className="text-xl font-semibold text-foreground">{title}</h1>
           <p className="text-sm text-muted-foreground">{subTitle}</p>
         </div>
 
-        <div className="flex gap-5">
-          <button type="button">
-            <Bell className="h-4 w-4" />
-          </button>
-          <button type="button">
-            <Search className="h-4 w-4" />
-          </button>
-          <button type="button">
-            <User className="h-4 w-4" />
-          </button>
+        <div className="flex items-center gap-3">
+          <div>
+            <div className="text-sm text-muted-foreground">Current Balance</div>
+            {/* net amount will be calculated based on user profit and loss */}
+            <div className="font-semibold text-accent text-right">
+              $3.443.81
+            </div>
+          </div>
+          <div className="space-x-2">
+            <button
+              type="button"
+              className="hover:bg-sidebar-accent hover:text-sidebar-accent-foreground hover:rounded-lg px-3 py-2"
+            >
+              <Search className="h-4 w-4" />
+            </button>
+            <button
+              type="button"
+              className="hover:bg-sidebar-accent hover:text-sidebar-accent-foreground hover:rounded-lg px-3 py-2"
+            >
+              <Bell className="h-4 w-4" />
+            </button>
+            <button
+              type="button"
+              className="hover:bg-sidebar-accent hover:text-sidebar-accent-foreground hover:rounded-lg px-3 py-2"
+            >
+              <User className="h-4 w-4" />
+            </button>
+          </div>
         </div>
       </div>
     </div>
