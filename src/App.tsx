@@ -23,7 +23,7 @@ const router = createBrowserRouter([
       },
       {
         path: "dashboard",
-        element: <Navigate to="/" replace />,
+        element: <Dashboard />,
       },
       {
         path: "transactions",

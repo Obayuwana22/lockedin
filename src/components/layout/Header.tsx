@@ -7,7 +7,7 @@ const Header = () => {
   const location = useLocation();
 
   const routeInfo: Record<string, { title: string; subTitle: string }> = {
-    "/": {
+    "/dashboard": {
       title: "Dashboard",
       subTitle: "Welcome back! Here's your financial overview",
     },

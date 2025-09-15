@@ -17,6 +17,7 @@ import Logo from "../Logo";
 
 const Sidebar = () => {
   const location = useLocation();
+  console.log(location)
 
   const isActive = (path: string) => {
     return location.pathname === `/${path}` || (path === "dashboard" && location.pathname === "/");
