@@ -1,8 +1,11 @@
 import React from 'react'
+import OutletNav from '../../../components/OutletNav'
 
 const Analytics = () => {
   return (
-    <div>Analytics</div>
+    <div>
+      <OutletNav/>
+      Analytics</div>
   )
 }
 

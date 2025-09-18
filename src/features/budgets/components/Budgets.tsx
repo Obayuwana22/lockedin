@@ -1,8 +1,11 @@
 import React from 'react'
+import OutletNav from '../../../components/OutletNav'
 
 const Budgets = () => {
   return (
-    <div>Budgets</div>
+    <div>
+      <OutletNav/>
+      Budgets</div>
   )
 }
 

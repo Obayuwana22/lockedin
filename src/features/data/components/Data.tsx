@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
+import OutletNav from "../../../components/OutletNav";
 
 const Data = () => {
   return (
-    <div>Data</div>
-  )
-}
+    <div>
+      <OutletNav />
+      Data
+    </div>
+  );
+};
 
-export default Data
+export default Data;
