@@ -1,13 +1,5 @@
 import { nanoid } from "nanoid";
-import {
-  Home,
-  CreditCard,
-  Target,
-  BarChart3,
-  Database,
-//   Menu,
-//   TrendingUp,
-} from "lucide-react";
+import { Home, CreditCard, Target, BarChart3, Database } from "lucide-react";
 import { type LucideIcon } from "lucide-react";
 
 interface NavLink {
@@ -53,5 +45,39 @@ export const navLinks: NavLink[] = [
     path: "data",
     description: "Backup and manage your data",
     icon: Database,
+  },
+];
+
+interface Category {
+  name: string;
+  icon: string;
+}
+
+export const type = ["Income", "Expense"];
+
+export const categories: Category[] = [
+  {
+    name: "Food & Dining",
+    icon: "🍽️",
+  },
+  {
+    name: "Transportation",
+    icon: "🚗",
+  },
+  {
+    name: "Shopping",
+    icon: "🛍️",
+  },
+  {
+    name: "Entertainment",
+    icon: "🎬",
+  },
+  {
+    name: "Bills & Utilities",
+    icon: "⚡",
+  },
+  {
+    name: "Healthcare",
+    icon: "🏥",
   },
 ];

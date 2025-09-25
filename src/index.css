@@ -122,3 +122,12 @@
 body {
   font-family: var(--font-geist-sans);
 }
+
+@layer components {
+  .shadow-border-bottom {
+    @apply border-b border-border rounded-md shadow;
+  }
+  .shadow-border {
+    @apply border border-border rounded-md shadow;
+  }
+}

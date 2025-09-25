@@ -5,7 +5,7 @@ const TransactionList = () => {
   return (
     <div className="border border-sidebar-border rounded-lg bg-sidebar py-6 w-full shadow">
       <div className="flex flex-col gap-5">
-        <div className="flex items-center justify-between pl-5 pr-5 ">
+        <div className="flex items-center justify-between pl-5 pr-5">
           <div className="text-foreground font-semibold">
             Transactions <span>6</span>
           </div>
