@@ -17,7 +17,7 @@ const Transactions = () => {
         />
         <button
           type="button"
-          onClick={() => setIsOpen(!isOpen)}
+          onClick={() => setIsOpen(true)}
           className="flex items-center gap-5 bg-primary text-primary-foreground px-3 py-1.5 rounded-lg hover:opacity-90"
         >
           <PlusCircle className="w-4 h-4" />

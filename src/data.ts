@@ -47,37 +47,3 @@ export const navLinks: NavLink[] = [
     icon: Database,
   },
 ];
-
-interface Category {
-  name: string;
-  icon: string;
-}
-
-export const type = ["Income", "Expense"];
-
-export const categories: Category[] = [
-  {
-    name: "Food & Dining",
-    icon: "🍽️",
-  },
-  {
-    name: "Transportation",
-    icon: "🚗",
-  },
-  {
-    name: "Shopping",
-    icon: "🛍️",
-  },
-  {
-    name: "Entertainment",
-    icon: "🎬",
-  },
-  {
-    name: "Bills & Utilities",
-    icon: "⚡",
-  },
-  {
-    name: "Healthcare",
-    icon: "🏥",
-  },
-];
