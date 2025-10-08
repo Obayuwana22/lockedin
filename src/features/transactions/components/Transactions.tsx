@@ -4,9 +4,31 @@ import TransactionForm from "./TransactionForm";
 import OutletHeaders from "../../../components/OutletHeaders";
 import { PlusCircle } from "lucide-react";
 import OutletNav from "../../../components/OutletNav";
+import type { Transaction } from "../../../types";
 
 const Transactions = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [showForm, setShowForm] = useState(false);
+  const [editingTransaction, setEditingTransaction] =
+    useState<Transaction | null>(null);
+  const handleAddTransaction = () => {
+    setEditingTransaction(null);
+    setShowForm(true);
+  };
+
+  const handleEditTransaction = (transaction: Transaction) => {
+    setEditingTransaction(transaction);
+    setShowForm(true);
+  };
+
+  const handleFormSuccess = () => {
+    setShowForm(false);
+    setEditingTransaction(null);
+  };
+
+  const handleFormCancel = () => {
+    setShowForm(false);
+    setEditingTransaction(null);
+  };
   return (
     <div>
       <OutletNav />
@@ -17,15 +39,21 @@ const Transactions = () => {
         />
         <button
           type="button"
-          onClick={() => setIsOpen(true)}
-          className="flex items-center gap-5 bg-primary text-primary-foreground px-3 py-1.5 rounded-lg hover:opacity-90"
+          onClick={handleAddTransaction}
+          className="flex items-center gap-5 bg-primary text-primary-foreground px-3 py-1.5 rounded-lg hover:opacity-90 cursor-pointer"
         >
           <PlusCircle className="w-4 h-4" />
           Add Transaction
         </button>
       </div>
-      {isOpen && <TransactionForm isOpen={isOpen} setIsOpen={setIsOpen} />}
-      <TransactionList />
+      {showForm && (
+        <TransactionForm
+          transaction={editingTransaction || undefined}
+          onSuccess={handleFormSuccess}
+          onCancel={handleFormCancel}
+        />
+      )}
+      <TransactionList onEditTransaction={handleEditTransaction}/>
     </div>
   );
 };

@@ -130,4 +130,7 @@ body {
   .shadow-border {
     @apply border border-border rounded-md shadow;
   }
+  .hover-transition{
+    @apply transition-colors duration-300 ease-in-out
+  }
 }

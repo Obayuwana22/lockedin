@@ -26,9 +26,9 @@ const categoriesSlice = createSlice({
   name: "categories",
   initialState,
   reducers: {
+    addCategory: () => {}
   },
 });
 
-export const {} = categoriesSlice.actions;
+export const {addCategory} = categoriesSlice.actions;
 export default categoriesSlice.reducer;
-console.log(categoriesSlice)
