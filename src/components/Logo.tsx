@@ -1,4 +1,3 @@
-import React from "react";
 import { DollarSign } from "lucide-react";
 
 const Logo = () => {
@@ -7,7 +6,7 @@ const Logo = () => {
       <div className="bg-primary p-2 rounded-lg">
         <DollarSign className="h-4 w-4 text-primary-foreground"/>
       </div>
-      <div className="text-lg font-semibold text-sidebar-foreground">FinanceTracker</div>
+      <div className="text-lg font-semibold text-sidebar-foreground">LockedIn</div>
     </div>
   );
 };

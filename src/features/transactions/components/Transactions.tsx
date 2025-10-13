@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import TransactionList from "./TransactionList";
 import TransactionForm from "./TransactionForm";
 import OutletHeaders from "../../../components/OutletHeaders";
@@ -53,7 +53,7 @@ const Transactions = () => {
           onCancel={handleFormCancel}
         />
       )}
-      <TransactionList onEditTransaction={handleEditTransaction}/>
+      <TransactionList onEditTransaction={handleEditTransaction} />
     </div>
   );
 };

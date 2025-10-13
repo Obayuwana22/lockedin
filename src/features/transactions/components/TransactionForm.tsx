@@ -12,7 +12,10 @@ import type { Transaction } from "../../../types";
 import { useState } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { generateId } from "../../../utils/finance";
-import { addTransaction, updateTransaction } from "../transactionsSlice";
+import {
+  addTransaction,
+  updateTransaction,
+} from "../../../lib/redux/slices/transactionsSlice";
 
 const transactionSchema = z.object({
   type: z.enum(["income", "expense"], {
@@ -62,7 +65,7 @@ const TransactionForm = ({
       amount: transaction?.amount.toString() || "",
       description: transaction?.description || "",
       category: transaction?.category || "",
-      date: transaction?.date || "",
+      date: transaction?.date || new Date().toISOString().split("T")[0],
     },
   });
   const selectedCategory = watch("category");
