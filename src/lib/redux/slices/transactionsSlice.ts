@@ -49,9 +49,31 @@ const transactionsSlice = createSlice({
         (t) => t.id !== action.payload
       );
     },
+    setTransactions: (state, action: PayloadAction<Transaction[]>) => {
+      state.transactions = action.payload;
+    },
+    setFilters: (
+      state,
+      action: PayloadAction<Partial<TransactionsState["filters"]>>
+    ) => {
+      state.filters = { ...state.filters, ...action.payload };
+    },
+    setLoading: (state, action: PayloadAction<boolean>) => {
+      state.loading = action.payload;
+    },
+    setError: (state, action: PayloadAction<string | null>) => {
+      state.error = action.payload;
+    },
   },
 });
 
-export const { addTransaction, updateTransaction, deleteTransaction } =
-  transactionsSlice.actions;
+export const {
+  addTransaction,
+  updateTransaction,
+  deleteTransaction,
+  setTransactions,
+  setFilters,
+  setLoading,
+  setError,
+} = transactionsSlice.actions;
 export default transactionsSlice.reducer;

@@ -1,10 +1,11 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 import { Dashboard } from "./features/dashboard";
 import { Transactions } from "./features/transactions";
 import { Budgets } from "./features/budgets";
 import { Analytics } from "./features/analytics";
 import { Data } from "./features/data";
 import Landing from "./pages/Landing";
+import { PersistentApp } from "./PersistentApp";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,7 @@ const router = createBrowserRouter([
       },
       {
         path: "transactions",
+        // element: <Transactions />,
         element: <Transactions />,
       },
       {
@@ -42,7 +44,7 @@ const router = createBrowserRouter([
 function App() {
   return (
     <div className="font-sans">
-      <RouterProvider router={router} />
+      <PersistentApp router={router} />
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
-import type { Category } from "../../types";
+import type { Category } from "../../../types";
 
 const defaultCategories: Category[] = [
   { id: "1", name: "Food & Dining", color: "#f59e0b", icon: "🍽️", type: "expense" },
@@ -15,19 +15,45 @@ const defaultCategories: Category[] = [
 
 interface CategoriesState {
   categories: Category[];
+  loading: boolean;
+  error:string | null
 }
 
 const initialState: CategoriesState = {
   categories: defaultCategories,
+    loading: false,
+  error: null
 };
 
 const categoriesSlice = createSlice({
   name: "categories",
   initialState,
   reducers: {
-    addCategory: () => {}
+   addCategory: (state, action: PayloadAction<Category>) => {
+      state.categories.push(action.payload)
+    },
+    updateCategory: (state, action: PayloadAction<Category>) => {
+      const index = state.categories.findIndex((c) => c.id === action.payload.id)
+      if (index !== -1) {
+        state.categories[index] = action.payload
+      }
+    },
+    deleteCategory: (state, action: PayloadAction<string>) => {
+      state.categories = state.categories.filter((c) => c.id !== action.payload)
+    },
+    setCategories: (state, action: PayloadAction<Category[]>) => {
+      state.categories = action.payload
+    },
+    setLoading: (state, action: PayloadAction<boolean>) => {
+      state.loading = action.payload
+    },
+    setError: (state, action: PayloadAction<string | null>) => {
+      state.error = action.payload
+    },
   },
-});
+})
 
-export const {addCategory} = categoriesSlice.actions;
-export default categoriesSlice.reducer;
+export const { addCategory, updateCategory, deleteCategory, setCategories, setLoading, setError } =
+  categoriesSlice.actions
+
+export default categoriesSlice.reducer

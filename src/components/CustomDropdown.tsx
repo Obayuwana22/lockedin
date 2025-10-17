@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from "react";
 import { ChevronDown, Check } from "lucide-react";
-import { useAppSelector } from "../lib/redux/hooks";
 
 type DropdownOption = string | { name: string; icon: string };
 
@@ -12,9 +11,6 @@ export default function CustomDropdown({ selection }: CustomDropdownProps) {
   const [open, setOpen] = useState(false);
   const [selected, setSelected] = useState(selection[0]);
   const dropdownRef = useRef<HTMLDivElement | null>(null);
-
-  const cat = useAppSelector((state) => state.category)
-  console.log(cat)
 
   const getDisplayValue = (option: DropdownOption) => {
     if (typeof option === "string") {

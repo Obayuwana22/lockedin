@@ -1,32 +1,38 @@
 import React from "react";
 import { Bell, Search, User } from "lucide-react";
 import { useLocation } from "react-router-dom";
+import { useAppSelector } from "../../lib/redux/hooks";
+import { calculateFinancialSummary, formatCurrency } from "../../utils/finance";
+
+const routeInfo: Record<string, { title: string; subTitle: string }> = {
+  "/dashboard": {
+    title: "Dashboard",
+    subTitle: "Welcome back! Here's your financial overview",
+  },
+  "/transactions": {
+    title: "Transactions",
+    subTitle: "Manage your income and expenses",
+  },
+  "/budgets": {
+    title: "Budgets",
+    subTitle: "Set and track your spending limits",
+  },
+  "/analytics": {
+    title: "Analytics",
+    subTitle: "Analyze your financial patterns and trends",
+  },
+  "/data": {
+    title: "Data",
+    subTitle: "Backup, restore, and manage your financial data",
+  },
+};
 
 const Header = () => {
   const location = useLocation();
-
-  const routeInfo: Record<string, { title: string; subTitle: string }> = {
-    "/dashboard": {
-      title: "Dashboard",
-      subTitle: "Welcome back! Here's your financial overview",
-    },
-    "/transactions": {
-      title: "Transactions",
-      subTitle: "Manage your income and expenses",
-    },
-    "/budgets": {
-      title: "Budgets",
-      subTitle: "Set and track your spending limits",
-    },
-    "/analytics": {
-      title: "Analytics",
-      subTitle: "Analyze your financial patterns and trends",
-    },
-    "/data": {
-      title: "Data",
-      subTitle: "Backup, restore, and manage your financial data",
-    },
-  };
+  const transactions = useAppSelector(
+    (state) => state.transactions.transactions
+  );
+  const summary = calculateFinancialSummary(transactions);
 
   const { title, subTitle } = routeInfo[location.pathname] || {
     title: "Page Not Found",
@@ -45,8 +51,12 @@ const Header = () => {
           <div>
             <div className="text-sm text-muted-foreground">Current Balance</div>
             {/* net amount will be calculated based on user profit and loss */}
-            <div className="font-semibold text-accent text-right">
-              $3.443.81
+            <div
+              className={`font-semibold text-right ${
+                summary.netIncome >= 0 ? "text-accent" : "text-destructive"
+              }`}
+            >
+              {formatCurrency(summary.netIncome)}
             </div>
           </div>
           <div className="space-x-2">

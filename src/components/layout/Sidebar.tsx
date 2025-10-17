@@ -51,8 +51,8 @@ const Sidebar = () => {
           <div className="flex items-center gap-3 bg-sidebar-accent/50 p-3 rounded-lg">
             <TrendingUp className="h-4 w-4 text-sidebar-accent-foreground" />
             <div className="text-sidebar-accent-foreground text-sm">
-              <div className="font-medium">Portfolio Ready</div>
-              <div className="text-xs">React + Typescript</div>
+              <div className="font-medium">Keep Growing💡</div>
+              <div className="text-xs">Track. Budget. Grow.</div>
             </div>
           </div>
         </div>

@@ -1,32 +1,43 @@
-import React from "react";
 import { DollarSign, TrendingUp, TrendingDown, PieChart } from "lucide-react";
+import { useAppSelector } from "../../../lib/redux/hooks";
+import {
+  calculateFinancialSummary,
+  formatCurrency,
+} from "../../../utils/finance";
 
 const SummaryCards = () => {
+  const transactions = useAppSelector(
+    (state) => state.transactions.transactions
+  );
+  const summary = calculateFinancialSummary(transactions);
   const cards = [
     {
       title: "Total Balance",
-      value: "$3,443.81",
-      change: "+2.5% from last month",
+      value: formatCurrency(summary.netIncome),
+      change:
+        summary.netIncome > 0
+          ? "+2.5% from last month"
+          : "-1.2% from last month",
       icon: DollarSign,
       color: "text-primary",
     },
     {
       title: "Total Balance",
-      value: "$3,700.00",
+      value: formatCurrency(summary.monthlyIncome),
       change: "+12% from last month",
       icon: TrendingUp,
       color: "text-accent",
     },
     {
       title: "Total Balance",
-      value: "$256.19",
+      value: formatCurrency(summary.monthlyExpenses),
       change: "-5% from last month",
       icon: TrendingDown,
       color: "text-destructive",
     },
     {
       title: "Total Balance",
-      value: "93.1%",
+      value: `${summary.savingsRate.toFixed(1)}%`,
       change: "+3% from last month",
       icon: PieChart,
       color: "text-primary",

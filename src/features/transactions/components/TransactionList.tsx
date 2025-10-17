@@ -1,5 +1,5 @@
 import { Select } from "@radix-ui/react-select";
-import {Edit, Search, Trash2 } from "lucide-react";
+import { Edit, Search, Trash2 } from "lucide-react";
 import { useState } from "react";
 import {
   SelectContent,
@@ -76,9 +76,14 @@ const TransactionList = ({ onEditTransaction }: TransactionListProps) => {
     }
   };
 
-  const totalAmount = filteredAndSortedTransactions.reduce((sum, transaction) => {
-    return transaction.type === "income" ? sum + transaction.amount : sum - transaction.amount
-  }, 0)
+  const totalAmount = filteredAndSortedTransactions.reduce(
+    (sum, transaction) => {
+      return transaction.type === "income"
+        ? sum + transaction.amount
+        : sum - transaction.amount;
+    },
+    0
+  );
 
   return (
     <div className="border border-sidebar-border rounded-lg bg-sidebar py-6 w-full shadow">
@@ -93,7 +98,11 @@ const TransactionList = ({ onEditTransaction }: TransactionListProps) => {
 
           <div className="text-sm text-muted-foreground">
             <span className="mr-1">Total:</span>
-            <span className={`font-medium ${totalAmount >= 0 ? "text-accent" : "text-destructive"}`}>
+            <span
+              className={`font-medium ${
+                totalAmount >= 0 ? "text-accent" : "text-destructive"
+              }`}
+            >
               {formatCurrency(totalAmount)}
             </span>
           </div>
@@ -226,7 +235,7 @@ const TransactionList = ({ onEditTransaction }: TransactionListProps) => {
                         }`}
                       >
                         {transaction.type === "income" ? "+" : "-"}
-                        $5
+                        {formatCurrency(Math.abs(transaction.amount))}
                       </div>
                       <div
                         className={`text-xs font-medium ${
