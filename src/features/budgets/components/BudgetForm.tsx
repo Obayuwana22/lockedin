@@ -25,9 +25,9 @@ const budgetSchema = z.object({
     .refine((val) => !isNaN(Number(val)) && Number(val) > 0, {
       message: "Budget limit must be a positive number",
     }),
-  period: z.enum(["weekly", "monthly", "yearly"], {
-    required_error: "Period is required",
-  }),
+  period: z
+    .enum(["weekly", "monthly", "yearly"])
+    .refine((val) => !!val, { message: "Type is required" }),
 });
 
 type BudgetFormData = z.infer<typeof budgetSchema>;

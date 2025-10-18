@@ -18,9 +18,9 @@ import {
 } from "../../../lib/redux/slices/transactionsSlice";
 
 const transactionSchema = z.object({
-  type: z.enum(["income", "expense"], {
-    required_error: "Type is required",
-  }),
+  type: z
+    .enum(["income", "expense"])
+    .refine((val) => !!val, { message: "Type is required" }),
   amount: z
     .string()
     .min(1, "Amount is required")

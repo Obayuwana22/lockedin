@@ -1,4 +1,3 @@
-import React from "react";
 import { BarChart3, PlusCircle, Settings, Target } from "lucide-react";
 import { Link } from "react-router-dom";
 

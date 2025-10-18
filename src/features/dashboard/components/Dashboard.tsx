@@ -1,4 +1,3 @@
-import React from "react";
 import SummaryCards from "./SummaryCards";
 import RecentTransactions from "./RecentTransactions";
 import BudgetOverview from "./BudgetOverview";

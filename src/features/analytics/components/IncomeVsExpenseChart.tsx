@@ -53,12 +53,32 @@ const IncomeVsExpensesChart = () => {
     .sort((a, b) => a.month.localeCompare(b.month))
     .slice(-6); // Last 6 months
 
-  const CustomTooltip = ({ active, payload, label }: any) => {
+  interface TooltipData {
+    month: string;
+    income: number;
+    expenses: number;
+    net: number;
+  }
+
+  interface TooltipPayloadItem {
+    name: string;
+    value: number;
+    color: string;
+    payload: TooltipData;
+  }
+
+  interface CustomTooltipProps {
+    active?: boolean;
+    payload?: TooltipPayloadItem[];
+    label?: string;
+  }
+
+  const CustomTooltip = ({ active, payload, label }: CustomTooltipProps) => {
     if (active && payload && payload.length) {
       return (
         <div className="bg-card border border-border rounded-lg p-3 shadow-lg">
           <p className="font-medium text-foreground">{label}</p>
-          {payload.map((entry: any, index: number) => (
+          {payload.map((entry: TooltipPayloadItem, index: number) => (
             <p key={index} className="text-sm" style={{ color: entry.color }}>
               {entry.name}: {formatCurrency(entry.value)}
             </p>

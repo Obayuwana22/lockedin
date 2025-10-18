@@ -1,6 +1,12 @@
 "use client";
 
-import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from "recharts";
+import {
+  PieChart,
+  Pie,
+  Cell,
+  ResponsiveContainer,
+  Tooltip,
+} from "recharts";
 import { useAppSelector } from "../../../lib/redux/hooks";
 import { formatCurrency } from "../../../utils/finance";
 
@@ -18,7 +24,7 @@ const SpendingByCategoryChart = () => {
         (cat) => cat.id === transaction.category
       );
       const categoryName = category?.name || "Unknown";
-      const categoryColor = category?.color || "#gray";
+      // const categoryColor = category?.color || "#gray";
 
       acc[categoryName] = (acc[categoryName] || 0) + transaction.amount;
       return acc;
@@ -36,7 +42,27 @@ const SpendingByCategoryChart = () => {
     .sort((a, b) => b.value - a.value)
     .slice(0, 8); // Top 8 categories
 
-  const CustomTooltip = ({ active, payload }: any) => {
+  interface TooltipData {
+    month: string;
+    income: number;
+    expenses: number;
+    net: number;
+  }
+
+  interface TooltipPayloadItem {
+    name: string;
+    value: number;
+    color: string;
+    payload: TooltipData;
+  }
+
+  interface CustomTooltipProps {
+    active?: boolean;
+    payload?: TooltipPayloadItem[];
+    label?: string;
+  }
+
+  const CustomTooltip = ({ active, payload }: CustomTooltipProps) => {
     if (active && payload && payload.length) {
       const data = payload[0];
       return (
@@ -86,9 +112,17 @@ const SpendingByCategoryChart = () => {
                   outerRadius={100}
                   fill="#8884d8"
                   dataKey="value"
-                  label={({ name, percent }) =>
-                    `${name} ${(percent * 100).toFixed(0)}%`
-                  }
+                  label={(entry) => {
+                    const total = chartData.reduce(
+                      (sum, item) => sum + item.value,
+                      0
+                    );
+                    const percentage = (
+                      ((entry.value as number) / total) *
+                      100
+                    ).toFixed(0);
+                    return `${entry.name} ${percentage}%`;
+                  }}
                   labelLine={false}
                 >
                   {chartData.map((entry, index) => (

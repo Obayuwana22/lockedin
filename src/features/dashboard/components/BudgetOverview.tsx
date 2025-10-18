@@ -1,5 +1,4 @@
 import { ArrowUpRight } from "lucide-react";
-import React from "react";
 import { Progress } from "../../../components/ui/progress";
 import { calculateBudgetProgress, formatCurrency, getBudgetStatus } from "../../../utils/finance";
 import { useAppSelector } from "../../../lib/redux/hooks";

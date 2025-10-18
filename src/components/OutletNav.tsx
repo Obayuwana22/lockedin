@@ -1,4 +1,3 @@
-import React from "react";
 import { ChevronRight, Home } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { navLinks } from "../data";
