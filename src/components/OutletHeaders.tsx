@@ -1,4 +1,4 @@
-import React from "react";
+
 
 const OutletHeaders = ({
   title,
@@ -8,7 +8,7 @@ const OutletHeaders = ({
   subtitle: string;
 }) => {
   return (
-    <div>
+    <div className="mb-5">
       <h1 className="text-3xl font-bold text-foreground">{title}</h1>
       <p className="text-muted-foreground">{subtitle}</p>
     </div>

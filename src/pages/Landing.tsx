@@ -5,12 +5,12 @@ import { Outlet } from "react-router-dom";
 
 const Landing = () => {
   return (
-    <div className="flex">
+    <div className="flex h-screen">
       <Sidebar />
 
-      <div className="flex-1">
+      <div className="flex-1 flex flex-col h-screen overflow-hidden">
         <Header />
-        <main className="mx-20 mt-5">
+        <main className="flex-1 overflow-y-auto px-20 py-5">
           <Outlet />
         </main>
       </div>

@@ -32,7 +32,7 @@ const Transactions = () => {
   return (
     <div>
       <OutletNav />
-      <div className="flex items-center justify-between mb-5">
+      <div className="flex items-center justify-between">
         <OutletHeaders
           title="Transactions"
           subtitle="Manage your income and expenses"

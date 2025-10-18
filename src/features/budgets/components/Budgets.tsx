@@ -31,7 +31,7 @@ const Budgets = () => {
   return (
     <div>
       <OutletNav />
-      <div className="flex items-center justify-between mb-5">
+      <div>
         <OutletHeaders
           title="Budget Tracking"
           subtitle="Set spending limits and track your progress"

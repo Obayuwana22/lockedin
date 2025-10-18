@@ -35,3 +35,23 @@ export interface FinancialSummary {
   netIncome: number;
   savingsRate: number;
 }
+
+export interface FinancialSummary {
+  totalIncome: number
+  totalExpenses: number
+  netIncome: number
+  monthlyIncome: number
+  monthlyExpenses: number
+  savingsRate: number
+}
+
+export interface ChartData {
+  name: string
+  value: number
+  color?: string
+}
+
+export interface DateRange {
+  from: Date
+  to: Date
+}
