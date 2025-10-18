@@ -10,7 +10,7 @@ const Landing = () => {
 
       <div className="flex-1 flex flex-col h-screen overflow-hidden">
         <Header />
-        <main className="flex-1 overflow-y-auto px-20 py-5">
+        <main className="flex-1 overflow-y-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 py-5">
           <Outlet />
         </main>
       </div>

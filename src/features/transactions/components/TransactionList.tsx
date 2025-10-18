@@ -205,7 +205,7 @@ const TransactionList = ({ onEditTransaction }: TransactionListProps) => {
               return (
                 <div
                   key={transaction.id}
-                  className="flex items-center justify-between"
+                  className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between"
                 >
                   <div className="flex gap-5">
                     <div className="w-10 h-10 bg-primary/10 rounded-full flex justify-center items-center">

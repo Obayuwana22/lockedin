@@ -9,8 +9,8 @@ const OutletHeaders = ({
 }) => {
   return (
     <div className="mb-5">
-      <h1 className="text-3xl font-bold text-foreground">{title}</h1>
-      <p className="text-muted-foreground">{subtitle}</p>
+      <h1 className="text-xl xl:text-3xl font-bold text-foreground">{title}</h1>
+      <p className="text-sm xl:text:base text-muted-foreground">{subtitle}</p>
     </div>
   );
 };

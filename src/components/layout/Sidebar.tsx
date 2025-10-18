@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 import { Menu, TrendingUp, X } from "lucide-react";
@@ -7,10 +7,10 @@ import Logo from "../Logo";
 import { cn } from "../../utils/cn";
 
 interface SidebarProps {
-  className?: string
+  className?: string;
 }
 
-const Sidebar = ({className}: SidebarProps) => {
+const Sidebar = ({ className }: SidebarProps) => {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const location = useLocation();
 
@@ -34,22 +34,23 @@ const Sidebar = ({className}: SidebarProps) => {
         )}
       </button>
 
-      {/* {isMobileOpen && (
+      {isMobileOpen && (
         <div
           className="fixed inset-0 bg-background/80 backdrop-blur-sm z-40 md:hidden"
           onClick={() => setIsMobileOpen(false)}
         />
-      )} */}
+      )}
 
       <div
         className={cn(
-          "h-screen sticky top-0 bg-sidebar border-r border-sidebar-border transform transition-transform duration-200 ease-in-out md:relative md:translate-x-0",
+          "fixed h-screen top-0 left-0 w-64 bg-sidebar border-r border-sidebar-border transform transition-transform duration-200 ease-in-out z-40",
           isMobileOpen ? "translate-x-0" : "-translate-x-full",
-          className,
+          "md:relative md:translate-x-0 md:z-0",
+          className
         )}
       >
-        <div className="flex flex-col  h-full">
-          <div className=" px-5 py-4">
+        <div className="flex flex-col h-full">
+          <div className="px-5 py-4">
             <Logo />
           </div>
           <div className="flex-1 space-y-1 p-4 border-t border-b border-sidebar-border">
@@ -65,6 +66,7 @@ const Sidebar = ({className}: SidebarProps) => {
                           ? "bg-sidebar-accent text-sidebar-accent-foreground"
                           : "text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
                       }`}
+                      onClick={() => setIsMobileOpen(false)}
                     >
                       {navLink.icon && <navLink.icon className="h-4 w-4" />}
                       <div>

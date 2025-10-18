@@ -218,7 +218,7 @@ const TransactionForm = ({
             </div>
           </div>
 
-          <div className="flex gap-2 justify-end text-base">
+          <div className="flex gap-2 justify-end text-sm md:text-base">
             {onCancel && (
               <button
                 type="button"
