@@ -1,4 +1,4 @@
-import Auth from '../features/auth'
+import Auth from '../features/Auth'
 
 const AuthPage = () => {
   return (
