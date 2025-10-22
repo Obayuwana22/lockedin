@@ -18,7 +18,7 @@ const OutletNav = () => {
       <div className="text-muted-foreground flex items-center gap-2">
         <Home className="w-3 h-3 " />
 
-        <Link to="dashboard" className="hover:text-foreground">
+        <Link to="/dashboard" className="hover:text-foreground">
           Dashboard
         </Link>
         <ChevronRight className="w-3 h-3 " />
