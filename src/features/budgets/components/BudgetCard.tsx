@@ -84,7 +84,9 @@ const BudgetCard = ({ budget, onEdit, onDelete }: BudgetCardProps) => {
                 {category?.name || "Unknown Category"}
               </div>
               <div className="flex items-center space-x-2">
-                <div className="text-xs border border-sidebar-border px-2 rounded-full">{budget.period}</div>
+                <div className="text-xs border border-sidebar-border px-2 rounded-full">
+                  {budget.period}
+                </div>
                 <div className="flex items-center space-x-1">
                   {getStatusIcon()}
                   <span className="text-xs text-muted-foreground">
@@ -95,11 +97,15 @@ const BudgetCard = ({ budget, onEdit, onDelete }: BudgetCardProps) => {
             </div>
           </div>
           <div className="flex gap-5 mr-5">
-            <button type="button" onClick={() => onEdit?.(budget)} className="cursor-pointer">
+            <button
+              type="button"
+              onClick={() => onEdit?.(budget)}
+              className="cursor-pointer"
+            >
               <Edit className="h-4 w-4" />
             </button>
             <button
-            type="button"
+              type="button"
               onClick={() => onDelete?.(budget.id)}
               className="text-destructive hover:text-destructive cursor-pointer"
             >

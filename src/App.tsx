@@ -6,10 +6,15 @@ import { Analytics } from "./features/analytics";
 import { Data } from "./features/data";
 import Landing from "./pages/Landing";
 import { PersistentApp } from "./PersistentApp";
+import AuthPage from "./pages/AuthPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
+    element: <AuthPage/>
+  },
+  {
+    path: "/landing",
     element: <Landing />,
     children: [
       {
@@ -17,7 +22,7 @@ const router = createBrowserRouter([
         element: <Dashboard />,
       },
       {
-        path: "dashboard",
+        path: "/dashboard",
         element: <Dashboard />,
       },
       {
