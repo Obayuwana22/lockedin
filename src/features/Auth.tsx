@@ -63,13 +63,7 @@ const Auth = () => {
           </div>
 
           <div className="flex gap-3 my-8">
-            <input
-              type="checkbox"
-              name="confirmPassword"
-              id="confirmPassword"
-              className="shadow-border px-3 py-1 focus:outline-2 focus:outline-ring/50"
-              placeholder="********"
-            />
+            <input type="checkbox" name="checkbox" id="checkbox" />
             <p className="text-xs">
               <span>I agree to the</span>
               <a href="#" className="text-primary">
@@ -82,10 +76,10 @@ const Auth = () => {
             </p>
           </div>
 
-          <Link to="">
+          <Link to="/dashboard">
             <button
-              type="submit"
-              disabled
+              type="button"
+              //   disabled
               className="flex items-center justify-center gap-3 w-full bg-primary py-3  text-primary-foreground rounded-md cursor-pointer hover:bg-primary/90 transition-colors"
             >
               <span>Create account</span>

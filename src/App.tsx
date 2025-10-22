@@ -11,10 +11,6 @@ import AuthPage from "./pages/AuthPage";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <AuthPage/>
-  },
-  {
-    path: "/landing",
     element: <Landing />,
     children: [
       {
@@ -22,12 +18,11 @@ const router = createBrowserRouter([
         element: <Dashboard />,
       },
       {
-        path: "/dashboard",
+        path: "dashboard",
         element: <Dashboard />,
       },
       {
         path: "transactions",
-        // element: <Transactions />,
         element: <Transactions />,
       },
       {
@@ -43,6 +38,11 @@ const router = createBrowserRouter([
         element: <Data />,
       },
     ],
+  },
+
+  {
+    path: "/auth",
+    element: <AuthPage />,
   },
 ]);
 
