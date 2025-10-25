@@ -1,11 +1,11 @@
-import Auth from '../features/Auth'
+import Auth from "../features/Auth";
 
 const AuthPage = () => {
   return (
     <div>
-        <Auth/>
+      <Auth />
     </div>
-  )
-}
+  );
+};
 
-export default AuthPage
+export default AuthPage;

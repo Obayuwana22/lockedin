@@ -1,5 +1,5 @@
 import { Bell, Search, User } from "lucide-react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useAppSelector } from "../../lib/redux/hooks";
 import { calculateFinancialSummary, formatCurrency } from "../../utils/finance";
 import { useEffect, useState } from "react";
@@ -55,7 +55,7 @@ const Header = () => {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-  
+
   return (
     <div className="bg-card/50 border-b border-sidebar-border py-2 px-5">
       <div className="flex items-center justify-between">
@@ -97,12 +97,14 @@ const Header = () => {
             >
               <Bell className="h-4 w-4" />
             </button>
-            <button
-              type="button"
-              className="hover:bg-sidebar-accent hover:text-sidebar-accent-foreground hover:rounded-lg px-3 py-2"
-            >
-              <User className="h-4 w-4" />
-            </button>
+            <Link to="/sign-up">
+              <button
+                type="button"
+                className="hover:bg-sidebar-accent hover:text-sidebar-accent-foreground hover:rounded-lg px-3 py-2"
+              >
+                <User className="h-4 w-4" />
+              </button>
+            </Link>
           </div>
         </div>
       </div>
