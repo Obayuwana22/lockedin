@@ -5,6 +5,10 @@ import { calculateFinancialSummary, formatCurrency } from "../../utils/finance";
 import { useEffect, useState } from "react";
 
 const routeInfo: Record<string, { title: string; subTitle: string }> = {
+  "/": {
+    title: "Dashboard",
+    subTitle: "Welcome back! Here's your financial overview",
+  },
   "/dashboard": {
     title: "Dashboard",
     subTitle: "Welcome back! Here's your financial overview",

@@ -15,12 +15,11 @@ const Sidebar = ({ className }: SidebarProps) => {
   const location = useLocation();
 
   const isActive = (path: string) => {
-    return (
-      location.pathname === `/${path}` ||
-      (path === "/dashboard" && location.pathname === "/")
-    );
+    if (path === "dashboard") {
+      return location.pathname === "/" || location.pathname === "/dashboard";
+    }
+    return location.pathname === `/${path}`;
   };
-
   return (
     <>
       <button
