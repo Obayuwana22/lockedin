@@ -99,7 +99,7 @@ const SpendingTrendChart = () => {
         <div className="flex items-center justify-between">
           <div className="font-medium">Spending Trends</div>
           <Select value={timeframe} onValueChange={(value: "7d" | "30d" | "90d" | "1y") => setTimeframe(value)}>
-            <SelectTrigger className="w-32">
+            <SelectTrigger>
               <SelectValue />
             </SelectTrigger>
             <SelectContent>

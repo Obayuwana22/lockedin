@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Auth = () => {
   return (
-    <div className="flex flex-col items-center justify-center h-screen m-5">
+    <div className="flex flex-col items-center justify-center h-screen mx-2">
       <div className="flex items-center gap-2 mb-10">
         <div className="bg-primary p-2 rounded-md">
           <Lock className="text-primary-foreground" />
