@@ -6,7 +6,7 @@ import { Analytics } from "./features/analytics";
 import { Data } from "./features/data";
 import Landing from "./pages/Landing";
 import { PersistentApp } from "./PersistentApp";
-import AuthPage from "./pages/AuthPage";
+import SignupPage from "./pages/SignupPage";
 import ErrorPage from "./pages/ErrorPage";
 
 const router = createBrowserRouter([
@@ -47,7 +47,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/sign-up",
-    element: <AuthPage />,
+    element: <SignupPage />,
     errorElement: <ErrorPage />,
   },
 ]);
