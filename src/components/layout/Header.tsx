@@ -1,4 +1,3 @@
-import { Bell, Search, User } from "lucide-react";
 import { useLocation } from "react-router-dom";
 import { useAppSelector } from "../../lib/redux/hooks";
 import { calculateFinancialSummary, formatCurrency } from "../../utils/finance";
@@ -64,10 +63,10 @@ const Header = () => {
     <div className="bg-card/50 border-b border-sidebar-border py-2 px-5">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-semibold text-foreground">
+          <h1 className="text-base sm:text-lg md:text-xl font-semibold text-foreground">
             {title}
           </h1>
-          <p className="text-xs sm:text-sm md:text-base lg:text-lg text-muted-foreground">
+          <p className="text-xs sm:text-sm  text-muted-foreground">
             {subTitle}
           </p>
         </div>
@@ -80,7 +79,7 @@ const Header = () => {
               </div>
               {/* net amount will be calculated based on user profit and loss */}
               <div
-                className={`font-semibold text-right text-xs sm:text-sm md:text-base lg:text-lg ${
+                className={`font-semibold text-right text-xs sm:text-sm md:text-base  ${
                   summary.netIncome >= 0 ? "text-accent" : "text-destructive"
                 }`}
               >
@@ -88,7 +87,15 @@ const Header = () => {
               </div>
             </div>
           )}
-          <div className="flex gap-0.5 md:gap-2">
+
+
+          {/* <button
+            type="button"
+            className="hover:bg-sidebar-accent hover:text-sidebar-accent-foreground hover:rounded-lg px-3 py-2"
+          >
+            <Bell className="h-4 w-4" />
+          </button> */}
+          {/* <div className="flex gap-0.5 md:gap-2">
             <button
               type="button"
               className="hover:bg-sidebar-accent hover:text-sidebar-accent-foreground hover:rounded-lg px-3 py-2"
@@ -101,15 +108,14 @@ const Header = () => {
             >
               <Bell className="h-4 w-4" />
             </button>
-            {/* <Link to="/sign-up"> */}
+
             <button
               type="button"
               className="hover:bg-sidebar-accent hover:text-sidebar-accent-foreground hover:rounded-lg px-3 py-2"
             >
               <User className="h-4 w-4" />
             </button>
-            {/* </Link> */}
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

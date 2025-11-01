@@ -25,7 +25,7 @@ const Sidebar = ({ className }: SidebarProps) => {
       <button
         type="button"
         onClick={() => setIsMobileOpen(!isMobileOpen)}
-        className="fixed top-4 left-4 z-50 md:hidden"
+        className="fixed top-4 right-5 z-50 md:hidden"
       >
         {isMobileOpen ? (
           <X className="h-4 w-4" />
