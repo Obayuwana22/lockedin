@@ -1,73 +1,46 @@
+# LockedIn - Personal Finance Tracker 📈
 [Live link](https://lockedin-teal.vercel.app/)
 
+LockedIn is a modern, client-side personal finance application designed to help you take control of your financial life. Built with React and TypeScript, it provides a clean, intuitive interface for tracking income, managing expenses, setting budgets, and visualizing your spending habits through detailed analytics. All your data is securely stored in your browser's local storage, ensuring complete privacy.
 
+## Features
 
-# React + TypeScript + Vite
+-   **📊 Interactive Dashboard**: Get a comprehensive overview of your financial health, including your current balance, monthly income/expenses, and savings rate.
+-   **🔄 Transaction Management**: Easily add, edit, and delete income or expense records. Powerful filtering and sorting options help you find what you need in seconds.
+-   **🎯 Budget Tracking**: Create custom budgets for different spending categories (e.g., Food, Transportation). The app visually tracks your progress and alerts you when you're nearing your limits.
+-   **📈 Financial Analytics**: Visualize your spending with insightful charts, including spending by category, income vs. expense trends, and monthly breakdowns.
+-   **🔒 Privacy First**: All financial data is stored locally on your device using `localStorage`. No data ever leaves your browser.
+-   **📱 Responsive Design**: A clean and fully responsive UI ensures a seamless experience across all your devices, from desktops to mobile phones.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Technologies Used
 
-Currently, two official plugins are available:
+| Technology         | Description                                    |
+| ------------------ | ---------------------------------------------- |
+| **React**          | A JavaScript library for building user interfaces. |
+| **TypeScript**     | A typed superset of JavaScript for robust code.    |
+| **Vite**           | Next-generation frontend tooling for fast builds.  |
+| **Redux Toolkit**  | The official, opinionated toolset for Redux.   |
+| **React Router**   | Declarative routing for React applications.        |
+| **Tailwind CSS**   | A utility-first CSS framework for rapid UI design. |
+| **Recharts**       | A composable charting library built on React.  |
+| **Radix UI**       | Unstyled, accessible UI primitives.                |
+| **React Hook Form**| Performant, flexible, and extensible forms.        |
+| **Zod**            | TypeScript-first schema validation.                |
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Usage
 
-## Expanding the ESLint configuration
+Once the application is running, you can explore its features:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+-   **Dashboard**: The landing page provides a high-level summary of your finances.
+-   **Transactions**: Navigate to the "Transactions" page to add new income or expense records. Use the form to input details and see them appear in the list. You can filter by type, category, or search term, and sort by date or amount.
+-   **Budgets**: Go to the "Budgets" section to create spending limits for different expense categories. The app will automatically track your spending against these budgets and show your progress.
+-   **Analytics**: Visit the "Analytics" page to see charts and graphs that break down your spending patterns, helping you identify areas where you can save.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Author
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+Connect with me for collaborations or questions!
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+-   **LinkedIn**: [Your LinkedIn Profile](https://linkedin.com/in/yourusername)
+-   **Twitter**: [@yourusername](https://twitter.com/yourusername)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
