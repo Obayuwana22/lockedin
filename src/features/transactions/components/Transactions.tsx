@@ -40,7 +40,7 @@ const Transactions = () => {
         <button
           type="button"
           onClick={handleAddTransaction}
-          className="flex items-center gap-5 bg-primary text-sm text-primary-foreground px-3 py-1.5 rounded-lg hover:opacity-90 cursor-pointer mb-5 md:mb-0 md:text-base"
+          className="flex items-center gap-3 bg-primary text-sm text-primary-foreground px-3 py-1.5 rounded-lg hover:opacity-90 cursor-pointer mb-5 md:mb-0 md:text-base md:gap-5"
         >
           <PlusCircle className="w-4 h-4" />
           Add Transaction

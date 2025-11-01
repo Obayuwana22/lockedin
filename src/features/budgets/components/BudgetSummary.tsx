@@ -63,7 +63,7 @@ const BudgetSummary = ({ onEditBudget, onAddBudget }: BudgetListProps) => {
           <button
             type="button"
             onClick={onAddBudget}
-            className="flex items-center gap- bg-primary text-primary-foreground px-3 py-1.5 rounded-lg hover:opacity-90 cursor-pointer"
+            className="flex items-center gap-3 bg-primary text-primary-foreground px-3 py-1.5 rounded-lg hover:opacity-90 cursor-pointer text-sm lg:text-base lg:gap-5"
           >
             <PlusCircle className="w-4 h-4" />
             Add Budget
@@ -156,7 +156,7 @@ const BudgetSummary = ({ onEditBudget, onAddBudget }: BudgetListProps) => {
           <button
             type="button"
             onClick={onAddBudget}
-            className="flex items-center gap-5 bg-primary text-primary-foreground px-3 py-1.5 rounded-lg hover:opacity-90 cursor-pointer mt-5"
+            className="flex items-center gap-3 bg-primary text-primary-foreground px-3 py-1.5 rounded-lg hover:opacity-90 cursor-pointer mt-5 text-sm lg:text-base lg:gap-5"
           >
             <PlusCircle className="w-4 h-4" />
             Create Budget

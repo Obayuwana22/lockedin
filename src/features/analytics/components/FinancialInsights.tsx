@@ -114,7 +114,7 @@ const FinancialInsights = () => {
     <div className="space-y-6">
       <div className="border border-sidebar-border rounded-lg bg-sidebar px-5 py-6 w-full shadow" >
         <div className="mb-5">
-          <div className="font-medium">Financial Insights</div>
+          <div className="font-semibold text-sm lg:text-base">Financial Insights</div>
         </div>
         <div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -146,7 +146,7 @@ const FinancialInsights = () => {
         {/* Budget Status */}
         <div className="border border-sidebar-border rounded-lg bg-sidebar px-5 py-6 w-full shadow">
           <div >
-            <div className="flex items-center space-x-2 mb-5 font-medium">
+            <div className="flex items-center space-x-2 mb-5 font-semibold text-sm lg:text-base">
               <Target className="h-5 w-5" />
               <span>Budget Status</span>
             </div>
@@ -203,13 +203,13 @@ const FinancialInsights = () => {
         {/* Spending Patterns */}
         <div className="border border-sidebar-border rounded-lg bg-sidebar px-5 py-6 w-full shadow">
           <div>
-            <div className="flex items-center space-x-2 mb-5 font-medium">
+            <div className="flex items-center space-x-2 mb-5 font-semibold text-sm lg:text-base">
               <TrendingUp className="h-5 w-5" />
               <span>Spending Patterns</span>
             </div>
           </div>
           <div>
-            <div className="space-y-3">
+            <div className="space-y-3 text-sm lg:text-base">
               <div className="p-3 bg-muted rounded-lg">
                 <p className="font-medium text-foreground">Average Daily Spending</p>
                 <p className="text-lg font-bold text-destructive">
@@ -218,8 +218,8 @@ const FinancialInsights = () => {
                 <p className="text-sm text-muted-foreground">This month</p>
               </div>
 
-              <div className="p-3 bg-muted rounded-lg">
-                <p className="font-medium text-foreground">Savings Rate</p>
+              <div className="p-3 bg-muted rounded-lg ">
+                <p className="font-medium text-foreground ">Savings Rate</p>
                 <p className="text-lg font-bold text-accent">
                   {currentMonthIncome > 0
                     ? (((currentMonthIncome - currentMonthExpenses) / currentMonthIncome) * 100).toFixed(1)
@@ -229,7 +229,7 @@ const FinancialInsights = () => {
                 <p className="text-sm text-muted-foreground">Of monthly income</p>
               </div>
 
-              <div className="p-3 bg-muted rounded-lg">
+              <div className="p-3 bg-muted rounded-lg ">
                 <p className="font-medium text-foreground">Transaction Count</p>
                 <p className="text-lg font-bold text-primary">{currentMonthTransactions.length}</p>
                 <p className="text-sm text-muted-foreground">This month</p>

@@ -89,7 +89,7 @@ const TransactionList = ({ onEditTransaction }: TransactionListProps) => {
     <div className="border border-sidebar-border rounded-lg bg-sidebar py-6 w-full shadow">
       <div className="flex flex-col gap-5 px-5">
         <div className="flex items-center justify-between">
-          <div className="text-foreground font-semibold">
+          <div className="text-foreground font-semibold text-sm lg:text-base">
             Transactions
             <span className="text-xs ml-5">
               {filteredAndSortedTransactions.length}

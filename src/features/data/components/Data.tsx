@@ -150,7 +150,7 @@ const Data = () => {
         )}
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6 text-sm lg:text-base">
         {/* Storage Information */}
         <div className="border border-sidebar-border rounded-lg bg-sidebar px-5 py-6 w-full shadow">
           <div className="flex items-center space-x-2 mb-8">
@@ -272,7 +272,7 @@ const Data = () => {
       </div>
 
       {/* Auto-Save Information */}
-      <div className="border border-sidebar-border rounded-lg bg-sidebar px-5 py-6 w-full shadow">
+      <div className="border border-sidebar-border rounded-lg bg-sidebar px-5 py-6 w-full shadow text-sm lg:text-base">
         <div>
           <div>Auto-Save</div>
         </div>

@@ -96,8 +96,8 @@ const SpendingTrendChart = () => {
   return (
     <div className="border border-sidebar-border rounded-lg bg-sidebar px-5 py-6 w-full shadow mb-5">
       <div>
-        <div className="flex items-center justify-between">
-          <div className="font-medium">Spending Trends</div>
+        <div className="flex items-center justify-between text-sm lg:text-base">
+          <div className="font-semibold text-sm lg:text-base">Spending Trends</div>
           <Select value={timeframe} onValueChange={(value: "7d" | "30d" | "90d" | "1y") => setTimeframe(value)}>
             <SelectTrigger>
               <SelectValue />

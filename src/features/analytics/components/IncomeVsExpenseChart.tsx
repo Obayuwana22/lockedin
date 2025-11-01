@@ -102,7 +102,7 @@ const IncomeVsExpensesChart = () => {
   return (
     <div className="border border-sidebar-border rounded-lg bg-sidebar px-5 py-6 w-full shadow">
       <div>
-        <div className="font-medium mb-5">Income vs Expenses</div>
+        <div className="font-semibold text-sm lg:text-base mb-5">Income vs Expenses</div>
       </div>
       <div>
         {chartData.length === 0 ? (
