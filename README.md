@@ -40,5 +40,5 @@ Once the application is running, you can explore its features:
 
 Connect with me for collaborations or questions!
 
--   **LinkedIn**: [Your LinkedIn Profile](https://www.linkedin.com/in/success-obayuwana?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)
--   **Twitter**: [@yourusername](https://x.com/its_success?t=C9xrGGJO06A7OOdl6RuBSQ&s=09)
+-   **LinkedIn**: [Success Obayuwana](https://www.linkedin.com/in/success-obayuwana?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)
+-   **Twitter**: [@its_success](https://x.com/its_success?t=C9xrGGJO06A7OOdl6RuBSQ&s=09)
