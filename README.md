@@ -42,5 +42,3 @@ Connect with me for collaborations or questions!
 
 -   **LinkedIn**: [Your LinkedIn Profile](https://linkedin.com/in/yourusername)
 -   **Twitter**: [@yourusername](https://twitter.com/yourusername)
-
----
