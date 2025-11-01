@@ -73,7 +73,7 @@ const Header = () => {
 
         <div className="flex items-center gap-3">
           {isBalanceVisible && (
-            <div>
+            <div className="hidden md:block">
               <div className="text-xs sm:text-sm md:text-base text-muted-foreground">
                 Current Balance
               </div>

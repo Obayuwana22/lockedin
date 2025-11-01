@@ -59,11 +59,11 @@ const BudgetSummary = ({ onEditBudget, onAddBudget }: BudgetListProps) => {
     <div>
       <div className="border border-sidebar-border rounded-lg bg-sidebar px-5 py-6 w-full shadow">
         <div className="flex items-center justify-between mb-10">
-          <div>BudgetSummary</div>
+          <div>Budget Summary</div>
           <button
             type="button"
             onClick={onAddBudget}
-            className="flex items-center gap-5 bg-primary text-primary-foreground px-3 py-1.5 rounded-lg hover:opacity-90 cursor-pointer"
+            className="flex items-center gap- bg-primary text-primary-foreground px-3 py-1.5 rounded-lg hover:opacity-90 cursor-pointer"
           >
             <PlusCircle className="w-4 h-4" />
             Add Budget
@@ -102,8 +102,8 @@ const BudgetSummary = ({ onEditBudget, onAddBudget }: BudgetListProps) => {
 
       <div className="flex items-center justify-between my-5">
         <div className="flex items-center gap-5">
-          <div className="flex items-center gap-2">
-            <label htmlFor="type">Filter by status:</label>
+          <div className="flex items-center gap-2 text-xs md:text-base">
+            <label htmlFor="type" className="hidden md:block">Filter by status:</label>
             <Select
               value={statusFilter}
               onValueChange={(value: "all" | "safe" | "warning" | "danger") =>
@@ -122,8 +122,8 @@ const BudgetSummary = ({ onEditBudget, onAddBudget }: BudgetListProps) => {
             </Select>
           </div>
 
-          <div className="flex items-center gap-2">
-            <label htmlFor="type">Filter by status:</label>
+          <div className="flex items-center gap-2 text-xs md:text-base">
+            <label htmlFor="type" className="hidden md:block">Filter by periods:</label>
             <Select
               value={periodFilter}
               onValueChange={(value: "all" | "weekly" | "monthly" | "yearly") =>

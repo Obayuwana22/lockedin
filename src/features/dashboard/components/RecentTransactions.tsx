@@ -28,11 +28,11 @@ const RecentTransactions = () => {
     <div className="border border-sidebar-border rounded-lg bg-sidebar py-6 w-full shadow">
       <div className="flex flex-col gap-5">
         <div className="flex items-center justify-between pl-5 pr-5 ">
-          <div className="text-foreground font-semibold">
+          <div className="text-foreground font-semibold text-sm lg:text-base">
             Recent Transactions
           </div>
           <Link to="/transactions" className="flex items-center gap-2 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground hover:rounded-lg px-2 py-1.5 transition-colors">
-            <span className="text-sm font-medium">View All</span>
+            <span className="text-xs lg:text-sm font-medium">View All</span>
             <ArrowUpRight className="h-4 w-4" />
           </Link>
         </div>

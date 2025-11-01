@@ -1,6 +1,10 @@
 import { ArrowUpRight } from "lucide-react";
 import { Progress } from "../../../components/ui/progress";
-import { calculateBudgetProgress, formatCurrency, getBudgetStatus } from "../../../utils/finance";
+import {
+  calculateBudgetProgress,
+  formatCurrency,
+  getBudgetStatus,
+} from "../../../utils/finance";
 import { useAppSelector } from "../../../lib/redux/hooks";
 import { Link } from "react-router-dom";
 
@@ -32,9 +36,16 @@ const BudgetOverview = () => {
     <div className="border border-sidebar-border rounded-lg bg-sidebar py-6 shadow">
       <div className="flex flex-col gap-5">
         <div className="flex items-center justify-between px-5 text-foreground">
-          <div className="text-foreground font-semibold">Budget Overview</div>
-          <Link to="/budgets" className="flex items-center gap-2 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground hover:rounded-lg px-2 py-1.5 transition-colors">
-            <span className="text-sm font-medium">Manage Budgets</span>
+          <div className="text-foreground font-semibold text-sm lg:text-base">
+            Budget Overview
+          </div>
+          <Link
+            to="/budgets"
+            className="flex items-center gap-2 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground hover:rounded-lg px-2 py-1.5 transition-colors"
+          >
+            <span className="text-xs lg:text-sm font-medium">
+              Manage Budgets
+            </span>
             <ArrowUpRight className="h-4 w-4" />
           </Link>
         </div>
