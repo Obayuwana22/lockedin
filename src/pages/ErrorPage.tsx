@@ -10,7 +10,7 @@ const ErrorPage = () => {
         {error.status === 404 && (
           <div className="flex flex-col items-center justify-center h-screen">
             <h1 className="font-semibold md:text-2xl text-destructive">
-              {error.status} - {error.statusText}
+              {error.status} {error.statusText}
             </h1>
             <p className="mt-1 text-sm md:text-base">
               {error.status === 404

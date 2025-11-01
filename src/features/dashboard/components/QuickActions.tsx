@@ -1,4 +1,4 @@
-import { BarChart3, PlusCircle, Settings, Target } from "lucide-react";
+import { BarChart3, PlusCircle, Target } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const QuickActions = () => {
@@ -24,13 +24,13 @@ const QuickActions = () => {
       color: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
       path: "/analytics",
     },
-    {
-      title: "Settings",
-      description: "Manage categories and preferences",
-      icon: Settings,
-      color: "bg-muted text-muted-foreground hover:bg-muted/80",
-      path: "",
-    },
+    // {
+    //   title: "Settings",
+    //   description: "Manage categories and preferences",
+    //   icon: Settings,
+    //   color: "bg-muted text-muted-foreground hover:bg-muted/80",
+    //   path: "",
+    // },
   ];
   return (
     <div className="border border-sidebar-border rounded-lg bg-sidebar p-5 shadow">

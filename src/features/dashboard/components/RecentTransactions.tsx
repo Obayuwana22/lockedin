@@ -1,6 +1,7 @@
 import { ArrowUpRight } from "lucide-react";
 import { useAppSelector } from "../../../lib/redux/hooks";
 import { formatCurrency } from "../../../utils/finance";
+import { Link } from "react-router-dom";
 
 const RecentTransactions = () => {
   const transactions = useAppSelector(
@@ -30,10 +31,10 @@ const RecentTransactions = () => {
           <div className="text-foreground font-semibold">
             Recent Transactions
           </div>
-          <div className="flex items-center gap-2 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground hover:rounded-lg px-2 py-1.5">
+          <Link to="/transactions" className="flex items-center gap-2 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground hover:rounded-lg px-2 py-1.5 transition-colors">
             <span className="text-sm font-medium">View All</span>
             <ArrowUpRight className="h-4 w-4" />
-          </div>
+          </Link>
         </div>
 
         <div className="px-5">
