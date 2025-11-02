@@ -22,6 +22,12 @@ export function useDataPersistence() {
         dispatch(setTransactions(transactions));
         dispatch(setBudgets(budgets));
 
+        dispatch(setTransactions(transactions || []));
+        dispatch(setBudgets(budgets || []));
+        if (categories && categories.length > 0) {
+          dispatch(setCategories(categories));
+        }
+
         // If no data exists, load sample data
         // if (transactions.length === 0 && budgets.length === 0) {
         //   dispatch(setTransactions(sampleTransactions))
@@ -32,9 +38,9 @@ export function useDataPersistence() {
         // }
 
         // Always load categories (they include defaults)
-        if (categories.length > 0) {
-          dispatch(setCategories(categories));
-        }
+        // if (categories.length > 0) {
+        //   dispatch(setCategories(categories));
+        // }
       } catch (error) {
         console.error("Failed to load persisted data:", error);
         // Fallback to sample data
